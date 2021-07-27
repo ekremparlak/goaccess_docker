@@ -4,5 +4,8 @@ if [ ! -f /Caddyfile ]; then
     sh /scripts/createcaddyfile.sh ;
     sh /scripts/findlogs.sh
 fi
+    rm /Caddyfile ;
+    sh /scripts/createcaddyfile.sh ;
+    sh /scripts/findlogs.sh
 
 caddy run
