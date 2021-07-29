@@ -1,6 +1,6 @@
 FROM alpine
 ENV LOG_FORMAT COMBINED
-ENV LOG_NAME "*.access.log"
+ENV LOG_NAME ".access.log"
 RUN apk --no-cache add goaccess caddy
 WORKDIR /usr/share/GeoIP
 RUN wget https://dl.miyuru.lk/geoip/maxmind/country/maxmind.dat.gz &&\

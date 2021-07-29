@@ -1,11 +1,8 @@
 #!/bin/sh
 set -e
-if [ ! -f /Caddyfile ]; then
-    sh /scripts/createcaddyfile.sh ;
-    sh /scripts/findlogs.sh
+if [ ! -f /Caddyfile ]; then sh /scripts/createcaddyfile.sh ; else rm /Caddyfile && sh /scripts/createcaddyfile.sh
 fi
-    rm /Caddyfile ;
-    sh /scripts/createcaddyfile.sh ;
-    sh /scripts/findlogs.sh
+if [ "$STATIC" == "true" ]; then sh /scripts/findlogs_static.sh ; else sh /scripts/findlogs.sh 
+fi
 
 caddy run
