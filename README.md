@@ -11,5 +11,6 @@ docker run -d \
 ## Environment Variables
 
 `LOG_FORMAT` default: "COMBINED"
+
 `ANONYMIZE` if set to "true" will anonymize ips
 
