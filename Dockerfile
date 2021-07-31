@@ -6,7 +6,7 @@ WORKDIR /usr/share/GeoIP
 RUN wget https://dl.miyuru.lk/geoip/maxmind/country/maxmind.dat.gz &&\
 	gzip -d maxmind.dat.gz &&\
     mv maxmind.dat GeoIP.dat
-RUN mkdir -p /html/logs
+RUN mkdir -p /goaccess/logs
 COPY scripts /scripts
 COPY docker-entrypoint /usr/local/bin/
 WORKDIR /

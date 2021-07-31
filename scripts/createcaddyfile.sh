@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 cat <<EOF > /Caddyfile
-:80
+:8080
 file_server {
-browse
-root /html/logs
+    root /goaccess
+    browse
 }
 EOF
