@@ -3,7 +3,7 @@
 ```
 docker run -d \
   -v /var/log/nginx:/logs:ro \
-  -p 8080:80 \
+  -p 8080:8080 \
   ghcr.io/ekremparlak/goaccess
 ```
 
@@ -11,3 +11,6 @@ docker run -d \
 ## Environment Variables
 
 `LOG_FORMAT` default: "COMBINED"
+
+`ANONYMIZE` if set to "true" will anonymize ips
+
