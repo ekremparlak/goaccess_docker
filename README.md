@@ -14,3 +14,4 @@ docker run -d \
 
 `ANONYMIZE` if set to "true" will anonymize ips
 
+`BASIC_USER` and `BASIC_PASSWORD` : you can set this to have a basic auth login page.
